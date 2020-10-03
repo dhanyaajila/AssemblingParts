@@ -37,7 +37,7 @@ class Dandd extends Component {
                     </ul>
                 </div>
                 <Link to="finalp"><button type="button">FINAL PRODUCT</button></Link><br /><br />
-                <Link to="registry"><button type="button">SELECT MORE ITEMS</button></Link><br /><br />
+                {/* <Link to="registry"><button type="button">SELECT MORE ITEMS</button></Link><br /><br /> */}
                 <Link to="/"><button type="button">HOME</button></Link>
             </div>
        )
