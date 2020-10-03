@@ -31,13 +31,13 @@ class Dandd extends Component {
         return(
             <div className="container">                
                 <div class="container">
-                    <h5>Your Selections</h5>
+                    <h1>Your Selections</h1>
                     <ul className="collection">
                         {addedItems}
                     </ul>
                 </div>
-                <Link to="finalp"><button type="button">FINAL PRODUCT</button></Link><br />
-                <Link to="registry"><button type="button">SELECT MORE ITEMS</button></Link><br />
+                <Link to="finalp"><button type="button">FINAL PRODUCT</button></Link><br /><br />
+                <Link to="registry"><button type="button">SELECT MORE ITEMS</button></Link><br /><br />
                 <Link to="/"><button type="button">HOME</button></Link>
             </div>
        )

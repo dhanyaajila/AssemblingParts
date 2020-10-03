@@ -27,12 +27,14 @@ class Registry extends Component {
         return(
             <div className="container">
                 <div className="cart">
-                    <h5>Parts of Cycle</h5>
+                    <h1>Parts of Cycle</h1>
                     <ul className="collection">
                         {itemList}
                     </ul>
                 </div>
                 <Link to="dandd"><button type="button">ASSEMBLE PARTS</button></Link><br />
+                <div></div>
+                <br/>
                 <Link to="/"><button type="button">HOME</button></Link>
             </div>
         )
