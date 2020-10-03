@@ -13,7 +13,7 @@ const initState = {
         {id:4,title:'Peddle',img:Item4},
         {id:5,title:'Seat',img:Item5}       
     ],
-    addedItems:[],
+    addedItems:[]
 }
 const listReducer= (state = initState, action)=>{
     if(action.type === ADD_TO_CART) {
