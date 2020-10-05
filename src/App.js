@@ -1,10 +1,11 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route } from "react-router-dom"
 import Home from "./routes/Home"
-import Registry from "./routes/Registry"
+import Registry from "./routes/Partlist"
 import Dandd from "./routes/Dandd"
 import Finalp from "./routes/Finalp"
 import "./style.css";
+import Partlist from './routes/Partlist';
 
 function App() {
   return (
@@ -14,8 +15,8 @@ function App() {
             <Route path="/" exact >
               <Home/>
             </Route>
-            <Route path="/registry">
-              <Registry />
+            <Route path="/partlist">
+              <Partlist />
             </Route>
             <Route path="/dandd">
               <Dandd />

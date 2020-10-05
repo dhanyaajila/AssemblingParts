@@ -1,11 +1,12 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
-import { addToCart } from '../components/actions/listActions'
+import { addPart } from '../components/actions/listActions'
 import "../style.css";
-class Registry extends Component {
+
+class PartList extends Component {
     handleClick = (id)=>{
-        this.props.addToCart(id); 
+        this.props.addPart(id); 
     }
 
     render() {
@@ -26,12 +27,12 @@ class Registry extends Component {
 
         return(
             <div className="container">
-                <div className="cart">
+               
                     <h1>Parts of Cycle</h1>
                     <ul className="collection">
                         {itemList}
                     </ul>
-                </div>
+               
                 <Link to="dandd"><button type="button">ASSEMBLE PARTS</button></Link><br />
                 <div></div>
                 <br/>
@@ -49,7 +50,7 @@ const mapStateToProps = (state)=>{
 }
 const mapDispatchToProps= (dispatch)=>{
     return {
-        addToCart: (id)=>{dispatch(addToCart(id))}
+        addPart: (id)=>{dispatch(addPart(id))}
     }
 }
-export default connect(mapStateToProps,mapDispatchToProps)(Registry)
+export default connect(mapStateToProps,mapDispatchToProps)(PartList)

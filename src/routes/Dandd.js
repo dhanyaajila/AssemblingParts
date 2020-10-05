@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
 import Draggable from "react-draggable";
-import "./da.css";
 
 class Dandd extends Component {
     
@@ -13,7 +12,7 @@ class Dandd extends Component {
             this.props.items.map(item=>{
                 return(
                     
-                    <li className="collection-item avatar" key={item.id}>
+                    <li className="collection-item" key={item.id}>
                         <div className="item-img">                             
                             <Draggable>
                                 <img src={item.img} className=""/>     
@@ -37,7 +36,7 @@ class Dandd extends Component {
                     </ul>
                 </div>
                 <Link to="finalp"><button type="button">FINAL PRODUCT</button></Link><br /><br />
-                {/* <Link to="registry"><button type="button">SELECT MORE ITEMS</button></Link><br /><br /> */}
+                <Link to="partlist"><button type="button">SELECT MORE ITEMS</button></Link><br /><br />
                 <Link to="/"><button type="button">HOME</button></Link>
             </div>
        )

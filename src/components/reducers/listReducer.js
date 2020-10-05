@@ -3,7 +3,6 @@ import Item2 from '../../images/bwheel.png'
 import Item3 from '../../images/front.png'
 import Item4 from '../../images/peddle.png'
 import Item5 from '../../images/seat.png'
-import {ADD_TO_CART} from '../actions/action-types/list-action'
 
 const initState = {
     items: [
@@ -16,8 +15,8 @@ const initState = {
     addedItems:[]
 }
 const listReducer= (state = initState, action)=>{
-    if(action.type === ADD_TO_CART) {
-        let addedItem = state.items.find(item=> action.id === item.id)
+    if(action.type === 'ADD_PART') {
+        let addedItem = state.items.find(item=> item.id === action.id)
         let existed_item= state.addedItems.find(item=> action.id === item.id)
         if(!existed_item) {
             addedItem.quantity = 1;
@@ -25,6 +24,10 @@ const listReducer= (state = initState, action)=>{
                 ...state,
                 addedItems: [...state.addedItems, addedItem]
             }
+        }
+        else
+        {
+            return state
         }
     }
     else{
